@@ -1,0 +1,95 @@
+@use '../helpers' as *;
+
+.contacts-page{
+    &__body{
+        display: flex;
+        align-items: center;
+
+        @include mobile{
+            flex-direction: column;
+            align-items: start;
+            row-gap: rem(30);
+        }
+    }
+
+    &__info{
+        max-width: rem(500);
+        font-size: rem(16);
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+
+        &-wrap{
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(15);
+        }
+    }
+
+    &__soc1als{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(30);
+    }
+
+    &__map{
+        width: 100%;
+    }
+
+    &__address,
+    &__mail,
+    &__tel{
+        position: relative;
+        padding-left: rem(40);
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: rem(25);
+            height: rem(25);
+            left: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: rem(19);
+        }
+    }
+
+    &__tel{
+        &::before{
+            background-image: url('./../icons/tel-1.svg');
+        }
+    }
+
+    &__mail{
+        &::before{
+            background-image: url('./../icons/mail-1.svg');
+        }
+    }
+
+    &__address{
+        margin-top: rem(10);
+        &::before{
+            background-image: url('./../icons/address-1.svg');
+        }
+    }
+
+    .soc1als{
+        @include mobile{
+            align-items: start;
+            justify-content: start;
+        }
+    }
+
+    .telegram-group{
+        position: relative;
+        padding-left: rem(40);
+
+        &::before{
+            content: url('./../icons/telegram_group.svg');
+            position: absolute;
+            top: rem(2);
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+
+.services{
+    @include bg-section;
+
+    &__inner{
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        
+        @include  mobile{
+            flex-direction: column;
+            align-items: end;
+        }
+    }
+    .block-title__title{
+        color: var(--color-light);
+    }
+    .benefit__items{
+        max-width: rem(295);
+
+        span{
+            text-align: left;
+            font-size: rem(14);
+            font-style: italic;
+            font-weight: 200;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use '../helpers' as *;
+
+.button{
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    // min-width: rem(220);
+    padding: rem(18);
+    font-size: rem(18);
+    color: var(--color-light);
+    white-space: nowrap;
+    background-color: var(--color-accent);
+    border: var(--border);
+    border-color: var(--color-accent);
+    border-radius: rem(6);
+
+    @include laptop{
+        min-width: rem(103);
+        padding: rem(14) rem(20);
+        font-size: rem(14);
+        border-radius: rem(8);
+    }
+
+    @include hover{
+        color: var(--color-light);
+        // background-color: var(--color-light);
+        // border-color: var(--color-accent);
+    }
+}

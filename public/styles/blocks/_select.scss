@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+.select {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url('../../icons/arrow_down.svg');
+        background-repeat: no-repeat;
+        right: rem(18);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: rem(15);
+        height: rem(15);
+        pointer-events: none;
+        filter: invert(63%) sepia(10%) saturate(2861%) hue-rotate(172deg) brightness(90%) contrast(85%);
+    }
+}
+
+select {
+    padding-right: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

@@ -1,0 +1,52 @@
+@use '../helpers' as *;
+
+.swiper-button-next:after, 
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after, 
+.swiper-rtl .swiper-button-next:after{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next:after, 
+.swiper-rtl .swiper-button-prev:after {
+    content: url('./../icons/arrow-right.svg');
+}
+
+.swiper-button-prev:after, 
+.swiper-rtl .swiper-button-next:after {
+    content: url('./../icons/arrow-left.svg');
+}
+
+
+.swiper-button-next{
+    right: 0;
+}
+
+.swiper-button-prev{
+    left: 0;
+}
+
+.swiper-button-next, 
+.swiper-button-prev{
+    width: fluid(64, 40);
+    height: fluid(64, 40);
+    background-color: var(--color-light);
+    border-radius: 50%;
+}
+
+span.swiper-pagination-bullet{
+    width: rem(10);
+    height: rem(10);
+    &.swiper-pagination-bullet-active{
+        background-color: var(--color-accent);
+    }
+}
+
+.swiper-pagination {
+    position: relative;
+    bottom: 0;
+}

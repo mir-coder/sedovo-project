@@ -1,0 +1,52 @@
+@use '../helpers' as *;
+
+.circle {
+    position: relative;
+    width: rem(350);
+    height: rem(350);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet{
+        width: rem(230);
+        height: rem(230);
+    }
+
+    &__image{
+        width: rem(260);
+        height: rem(260);
+        border-radius: 100%;
+
+        @include tablet{
+            width: rem(195);
+            height: rem(195);
+        }
+    }
+
+    &__text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            display: inline-block;
+            position: absolute;
+            width: rem(28);
+            transform-origin: center; 
+            transform: rotate(var(--rot)) translateY(rem(-150)); 
+
+            @include tablet{
+                transform: rotate(var(--rot)) translateY(rem(-110)); 
+            }
+        }
+    }   
+}

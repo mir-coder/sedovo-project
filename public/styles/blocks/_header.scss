@@ -1,0 +1,121 @@
+@use '../helpers' as *;
+
+.header{
+    font-family: var(--font-family-accent);
+    font-weight: 400;
+    z-index: 5;
+
+    &__overlay{
+        .logo{
+            width: rem(220);
+            
+            @include mobile{
+                &__image{
+                    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(274deg) brightness(107%) contrast(101%);
+                }
+            }
+        }
+
+        @include mobile{
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(55);
+            padding: rem(50) rem(20) rem(50);
+            color: var(--color-light);
+            background-color: var(--color-dark);
+            transition-duration: var(--transition-duration);
+            overflow-y: auto;
+
+            &:not(.is-active){
+                @include hide;
+
+                translate: 100%;
+            }
+        }
+    }
+
+    &__promo{
+        background-color: var(--color-dark);
+        color: var(--color-light);
+        padding-block: rem(17);
+        font-size: 14px;
+
+        &-inner{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: rem(10);
+        }
+    }
+
+    &__contacts{
+        display: flex;
+        flex-wrap: wrap;
+        gap: fluid(40, 20);
+
+        &-mobile{
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(15);
+        }
+    }
+
+    &__address,
+    &__mail,
+    &__phone{
+        position: relative;
+        padding-left: rem(30);
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: rem(24);
+            height: rem(24);
+            left: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: rem(24);
+        }
+    }
+
+    &__address{
+        &::before{
+            background-image: url('./../icons/address.svg');
+        }
+    }
+
+    &__mail{
+        &::before{
+            background-image: url('./../icons/mail.svg');
+        }
+    }
+
+    &__phone{
+        &::before{
+            background-image: url('./../icons/tel.svg');
+        }
+    }
+
+    &__body{
+        &-inner{
+            padding-block: rem(30);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__telegram-group{
+        position: relative;
+        padding-left: rem(30);
+
+        &::before{
+            content: url('./../icons/telegram_group.svg');
+            position: absolute;
+            top: rem(2);
+            left: 0;
+        }
+    }
+}

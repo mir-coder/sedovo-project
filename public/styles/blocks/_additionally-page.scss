@@ -1,0 +1,24 @@
+@use '../helpers' as *;
+
+.additionally-page{
+    .additionally{
+        &__items {
+            @include flex-center;
+        
+            flex-wrap: wrap;
+            gap: rem(20);
+        }
+
+        &__item{
+            max-width: fluid(380, 155);
+            // height: rem(380);
+            // overflow: hidden;
+        }
+
+        // &__image{
+        //     height: 100%;
+        //     object-fit: cover;
+        //     object-position: bottom;
+        // }
+    }
+}

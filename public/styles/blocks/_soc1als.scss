@@ -1,0 +1,10 @@
+@use '../helpers' as *;
+
+.soc1als{
+    @include flex-center;
+
+    &__list{
+        display: flex;
+        column-gap: rem(15);
+    }
+}

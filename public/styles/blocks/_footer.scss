@@ -1,0 +1,90 @@
+@use '../helpers' as *;
+
+.footer{
+    &__extra{
+        background-color: var(--color-dark);
+        color: var(--color-light);
+        padding-block: rem(12);
+
+        @include mobile-s{
+            padding-block: rem(35) rem(25);
+        }
+
+        &-inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include mobile-s{
+                flex-direction: column;
+                row-gap: rem(14);
+            }
+        }
+
+        &-copy{
+            @include mobile-s{
+                order: 3;
+            }
+        }
+
+        &-soc1als{
+            @include mobile-s{
+                order: 1;
+            }
+        }
+
+        &-rules{
+            @include mobile-s{
+                order: 2;
+            }
+        }
+    }
+
+    &__body{
+        background-color: var(--color-accent-20);
+        color: var(--color-light);
+        padding-block: rem(50);
+
+        &-inner{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include tablet{
+                flex-direction: column;
+                row-gap: rem(30);
+            }
+
+            @include mobile{
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &__menu{
+        &-list{
+            display: flex;
+            column-gap: rem(30);
+            font-family: var(--font-family-accent);
+            font-weight: 700;
+            font-size: rem(18);
+
+            @include tablet{
+                column-gap: rem(20);
+            }
+
+            @include mobile{
+                flex-direction: column;
+                row-gap: rem(18);
+            }
+        }
+    }
+
+    .soc1als__item{
+        transition-duration: var(--transition-duration);
+
+        @include hover{
+            transform: scale(1.1);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@use '../helpers' as *;
+
+.list-box{
+    font-size: fluid(16, 14);
+    padding-bottom: fluid(30, 15);
+
+    @include mobile{
+        padding-block: rem(30);
+    }
+
+    &__item{
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    &__key{
+        font-weight: 500;
+        color: var(--color-dark);
+    }
+
+    &__value{
+        color: var(--color-gray);
+        text-align: right;
+    }
+}

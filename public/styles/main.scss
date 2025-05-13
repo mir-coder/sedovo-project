@@ -1,0 +1,63 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'global';
+
+@use 'blocks/header';
+@use 'blocks/burger-button';
+@use 'blocks/logo';
+@use 'blocks/menu';
+@use 'blocks/soc1als';
+@use 'blocks/block-title';
+@use 'blocks/banner';
+@use 'blocks/feedback-form';
+@use 'blocks/group-input';
+@use 'blocks/button';
+@use 'blocks/field';
+@use 'blocks/select';
+@use 'blocks/checkbox';
+@use 'blocks/about';
+@use 'blocks/flex-block';
+@use 'blocks/block-indent';
+@use 'blocks/circle';
+@use 'blocks/advantages';
+@use 'blocks/benefit';
+@use 'blocks/catalog';
+@use 'blocks/card';
+@use 'blocks/services';
+@use 'blocks/gallery';
+@use 'blocks/swiper';
+@use 'blocks/questions';
+@use 'blocks/accordion-group';
+@use 'blocks/accordion';
+@use 'blocks/additionally';
+@use 'blocks/reviews';
+@use 'blocks/reviews-block';
+@use 'blocks/contacts';
+@use 'blocks/map';
+@use 'blocks/footer';
+@use 'blocks/modal';
+@use 'blocks/catalog-page';
+@use 'blocks/page';
+@use 'blocks/additionally-page';
+@use 'blocks/contacts-page';
+@use 'blocks/rules-page';
+@use 'blocks/reviews-page';
+@use 'blocks/questions-page';
+
+@use 'blocks/product-page';
+@use 'blocks/product-card';
+@use 'blocks/list-box';
+@use 'blocks/comfort';
+
+
+
+
+
+
+// .header,
+// main > *:not(:last-child),
+// .footer {
+//     display: none !important;
+// }

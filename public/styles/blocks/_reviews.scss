@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.reviews{
+    @include bg-section;
+
+    &__slider{
+        padding-bottom: rem(30);
+    }
+
+    &__inner{
+        position: relative;
+        z-index: 2;
+    }
+
+    .block-title__title{
+        color: var(--color-light);
+    }
+
+    .swiper-pagination {
+        position: relative;
+        bottom: rem(-30);
+    }
+}

@@ -1,0 +1,26 @@
+@use '../helpers' as *;
+
+.questions{
+    @include bg-section;
+
+    &__inner{
+        position: relative;
+        z-index: 2;
+
+        @include  mobile{
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__header{
+        max-width: rem(535);
+    }
+
+    &__body{
+        max-width: rem(600);
+    }
+
+    .block-title__title{
+        color: var(--color-light);
+    }
+}

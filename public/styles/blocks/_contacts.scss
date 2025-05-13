@@ -1,0 +1,88 @@
+@use '../helpers' as *;
+
+.contacts{
+    position: relative;
+    background-color: var(--color-light);
+    min-height: rem(400);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow-footer);
+    
+    &__info{
+        width: 50%;
+        &-inner{
+            width: rem(500);
+            padding-inline: rem(30);
+            margin-right: 0;
+
+            @include tablet{
+                width: rem(380);
+            }
+
+            @include mobile{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+
+        @include mobile{
+            width: 100%;
+            height: rem(300);
+        }
+    }
+
+    &__items{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(10);
+        font-family: var(--font-family-accent);
+        color: var(--color-dark);
+        font-weight: 500;
+        font-size: rem(16);
+    }
+
+    &__item{
+        position: relative;
+        padding-left: rem(35);
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: rem(24);
+            height: 100%;
+        }
+    }
+
+    &__title{
+        font-family: var(--font-family-accent);
+        color: var(--color-accent-60);
+        margin-bottom: rem(20);
+    }
+
+    &__tel{
+        &::before{
+            background-image: url('./../icons/tel-1.svg');
+        }
+    }
+
+    &__mail{
+        &::before{
+            background-image: url('./../icons/mail-1.svg');
+        }
+    }
+
+    &__address{
+        margin-top: rem(10);
+        &::before{
+            background-image: url('./../icons/address-1.svg');
+        }
+    }
+}

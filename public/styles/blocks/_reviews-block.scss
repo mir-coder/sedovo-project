@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.reviews-block{
+    &__items{
+       align-items: stretch;
+    }
+
+    &__item{
+        height: auto;
+        width: rem(390);
+        font-family: var(--font-family-accent);
+        background-color: var(--color-light);
+        padding: rem(45) rem(25) rem(35);
+        color: var(--color-dark);
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: rem(15);
+        height: 100%;
+    }
+
+    &__title{
+        text-transform: uppercase;
+        color: var(--color-accent);
+        font-weight: 700;
+    }
+
+    &__descriptions{
+        font-size: rem(16);
+        font-weight: 500;
+    }
+}

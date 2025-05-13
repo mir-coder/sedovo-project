@@ -1,0 +1,14 @@
+@use '../helpers' as *;
+
+.advantages{
+    @include bg-section;
+
+    &__inner{
+        position: relative;
+        z-index: 2;
+
+        @include  mobile{
+            flex-direction: column-reverse;
+        }
+    }
+}

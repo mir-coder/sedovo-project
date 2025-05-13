@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.comfort{
+    &__title{
+        margin-bottom: rem(20);
+    }
+
+    // &__list{
+       
+    // }
+
+    &__item{
+        font-size: fluid(16, 14);
+        padding-left: rem(30);
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('./../icons/check.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            width: rem(15);
+            height: rem(15);
+            top: rem(5);
+            left: 0;
+        }
+    }
+}

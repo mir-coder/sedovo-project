@@ -1,0 +1,7 @@
+@use '../helpers' as *;
+
+.group-input{
+    display: flex;
+    justify-content: space-between;
+    column-gap: rem(10);
+}

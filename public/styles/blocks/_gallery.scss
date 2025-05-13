@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.gallery{
+    &__slider{
+        width: 100%;
+        height: 100%;
+    }
+
+    &__items{
+        padding-bottom: rem(30);
+    }
+    
+    &__item{
+        width: rem(390);
+        height: fluid(390, 240);
+        text-align: center;
+
+        @include mobile-s{
+            height: rem(390);
+        }
+    }
+
+    &__image{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

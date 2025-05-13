@@ -1,0 +1,34 @@
+@use '../helpers' as *;
+
+.feedback-form{
+    @include flex-center;
+
+    flex-direction: column;
+    row-gap: rem(20);
+    background-color: var(--color-light);
+    border-radius: rem(16);
+    padding: rem(44) rem(41);
+    color: var(--color-dark);
+
+    @include mobile {
+        padding-inline: rem(25);
+    }
+
+    &__description{
+        font-family: var(--font-family-accent);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    &__items{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(10);
+    }
+
+    &__choise,
+    &__actions{
+        width: 100%;
+    }
+}

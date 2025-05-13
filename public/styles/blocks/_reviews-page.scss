@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.reviews-page{
+    .reviews-block{
+        &__items{
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(15);
+        }
+        &__item{
+            max-width: 100%;
+            width: 100%;
+            background-color: var(--color-accent-20);
+            border-radius: rem(6);
+            padding: rem(30) rem(25);
+        }
+
+        &__info{
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+}

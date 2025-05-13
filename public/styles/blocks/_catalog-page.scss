@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.catalog-page{
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: rem(20);
+
+        @include mobile-s{
+            row-gap: rem(15);
+        }
+
+        .card{
+            @include laptop{
+                max-width: rem(320);
+            }
+
+            @include tablet{
+                max-width: 48%;
+            }
+
+            @include mobile{
+                max-width: 100%;
+            }
+
+            &__img--usual {
+                @include tablet{
+                    min-height: rem(250);
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

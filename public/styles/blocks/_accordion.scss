@@ -1,0 +1,88 @@
+@use '../helpers' as *;
+
+.accordion {
+    background-color: var(--color-light);
+    padding: fluid(35, 25);
+    border-radius: rem(6);
+
+    @include laptop{
+        border-radius: rem(10);
+    }
+
+    &__details {
+        &[open] {
+            .accordion__title {
+                &::before,
+                &::after {
+                    background-color: var(--color-accent);
+                }
+
+                &::after {
+                    rotate: 0deg;
+                }
+            }
+
+            & + .accordion__content {
+                grid-template-rows: 1fr;
+            }
+        }
+    }
+
+    &__summary {
+        color: var(--color-accent);
+        list-style: none;
+
+        @include hover {
+            color: var(--color-accent);
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    &__title {
+        position: relative;
+        padding-right: rem(50);
+        color: inherit;
+        transition-duration: var(--transition-duration);
+
+        &::before,
+        &::after {
+            @include abs-y;
+
+            content: '';
+            right: 0;
+            width: rem(16);
+            height: rem(2);
+            background-color: var(--color-accent);
+            border-radius: 1rem;
+            transition-duration: var(--transition-duration);
+        }
+
+        &::after {
+            rotate: 90deg;
+        }
+    }
+
+    &__content {
+        /**
+            Магия css --- заставляем аакордион работать
+        */
+        display: grid;
+        grid-template-rows: 0fr;
+        transition-duration: 0.3s;
+        color: var(--color-dark);
+
+        &-inner {
+            overflow: hidden;
+        }
+
+        &-body {
+            --offsetTop: #{fluid(24, 16)};
+
+            margin-top: var(--offsetTop);
+            padding-top: var(--offsetTop);
+        }
+    }
+}

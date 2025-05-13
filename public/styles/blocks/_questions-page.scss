@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.questions-page{
+    .accordion{
+        background-color: var(--color-accent-20);
+        border: var(--border);
+        border-color: var(--color-accent-20);
+
+        &__summary {
+            color: var(--color-dark);
+        }
+    }
+}

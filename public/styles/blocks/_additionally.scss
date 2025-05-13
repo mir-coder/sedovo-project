@@ -1,0 +1,53 @@
+@use '../helpers' as *;
+
+.additionally{
+    &__items{
+        padding-bottom: rem(30);
+    }
+
+    &__item{
+        height: rem(515);
+        border-radius: rem(6);
+        overflow: hidden;
+        position: relative; 
+
+        &::before{
+            content: '';
+            position: absolute;
+            background: linear-gradient(180deg, rgba(87,153,215,0) 0%, rgba(87,153,215,1) 100%);
+            opacity: 0.7;
+            inset: 0;
+        }
+    }
+
+    &__image{
+        // width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__info{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: rem(50);
+    }
+
+    &__title{
+        color: var(--color-light);
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        bottom: 0;
+    }
+
+    .swiper-slide{
+        .additionally__image{
+            width: 100%;
+        }
+    }
+}

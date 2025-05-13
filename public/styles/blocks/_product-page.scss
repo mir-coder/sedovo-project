@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.product-page{
+    &__body{
+        padding-block: fluid(50, 30);
+        &-inner{
+            display: flex;
+            gap: rem(20);
+            margin-bottom: rem(20);
+            justify-content: space-between;
+
+            @include mobile{
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__comfort{
+        width: 45%;
+
+        @include mobile{
+           width: 100%;
+        }
+    }
+
+    &__info{
+        font-family: var(--font-family-base);
+        font-weight: 200;
+        font-style: italic;
+        font-size: fluid(16, 14);
+    }
+}
