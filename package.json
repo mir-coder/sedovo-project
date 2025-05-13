@@ -1,0 +1,21 @@
+{
+  "name": "k_famoly_hotel_sedovo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "sass --watch ."
+  },
+  "author": "Elena Miroshnichenko",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.87.0"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}
